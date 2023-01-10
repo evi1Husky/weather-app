@@ -3,9 +3,9 @@ import CityForm from './CityForm'
 
 function App() {
   return (
-    <div className='App'>
+    <main className='App'>
       <CityForm/>
-    </div>
+    </main>
   )
 }
 

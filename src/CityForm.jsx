@@ -18,14 +18,13 @@ export default function CityForm() {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <label>city</label>
-        <input type="text" name="city" placeholder="....." value={city}
-          onChange={handleChange} required />
-        <button type="submit">get weather</button>
-      </form>
-      <WeatherFetcher city={cityProp} />
-    </div>
+    <form className="cityForm"  onSubmit={handleSubmit}>
+      <input className="formInput" type="text" name="city"
+        placeholder="your city..." value={city}
+        onChange={handleChange} required />
+      <button className="submitButton" type="submit">get weather</button>
+      {/* <WeatherFetcher city={cityProp} /> */}
+      <WeatherFetcher city='tokyo' />
+    </form>
   );
 }

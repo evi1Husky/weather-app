@@ -9,10 +9,12 @@ export default function WeatherFetcher(props) {
       fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${props.city}`)
         .then(result => result.json()).then((result) => {
           fetch('https://api.open-meteo.com/v1/forecast?' +
-            `latitude=${result.results[0].latitude}&` + 
+            `latitude=${result.results[0].latitude}&` +
             `longitude=${result.results[0].longitude}` +
-            '&hourly=temperature_2m&daily=weathercode,temperature_2m_max,' +
-            `temperature_2m_min,precipitation_sum&timezone=${result.results[0].timezone}`)
+            '&hourly=temperature_2m,precipitation,windspeed_10m' + 
+            '&daily=weathercode,temperature_2m_max,temperature_2m_min,' + 
+            'precipitation_sum,windspeed_10m_max&timezone='+
+            `${result.results[0].timezone}`)
             .then(result => result.json()).then((result) => {
               setWeatherData(result)
             })
@@ -21,8 +23,6 @@ export default function WeatherFetcher(props) {
   }, [props.city])
 
   return (
-    <div>
-      <WeatherDisplayer data={weatherData} />
-    </div>
+    <WeatherDisplayer data={weatherData} />
   )
 }
