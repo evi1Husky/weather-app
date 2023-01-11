@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import WeatherFetcher from "./WeatherFetcher"
 
 export default function CityForm() {
@@ -17,14 +17,18 @@ export default function CityForm() {
     setCityProp(0)
   }
 
+  useEffect(() => {
+    setCityProp('london')
+  }, [])
+
   return (
     <form className="cityForm"  onSubmit={handleSubmit}>
       <input className="formInput" type="text" name="city"
         placeholder="your city..." value={city}
         onChange={handleChange} required />
       <button className="submitButton" type="submit">get weather</button>
-      {/* <WeatherFetcher city={cityProp} /> */}
-      <WeatherFetcher city='tokyo' />
+      <WeatherFetcher city={cityProp} />
+      {/* <WeatherFetcher city='tokyo' /> */}
     </form>
   );
 }

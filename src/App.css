@@ -37,3 +37,8 @@
   background-color:lightblue;
   cursor: default;
 }
+
+.chart-container {
+  width: 100rem;
+  height: 50rem;
+}
