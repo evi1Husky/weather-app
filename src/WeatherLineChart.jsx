@@ -10,9 +10,9 @@ import { curveLinear, curveStep, curveCardinal } from '@visx/curve'
 
 const customTheme = buildChartTheme({
   backgroundColor: 'black',
-  colors: ['lightBlue'],
-  svgLabelBig: { fill: '#d6e0f0' },
-  svgLabelSmall: { fill: '#d6e0f0' },
+  colors: ['rgb(219, 231, 255)'],
+  svgLabelBig: { fill: 'rgb(219, 231, 255)' },
+  svgLabelSmall: { fill: 'rgb(219, 231, 255)' },
   tickLength: 12,
 });
 

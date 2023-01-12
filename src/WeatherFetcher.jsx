@@ -23,6 +23,6 @@ export default function WeatherFetcher(props) {
   }, [props.city])
 
   return (
-    <WeatherDisplayer data={weatherData} />
+    <WeatherDisplayer className='weather-displayer' data={weatherData} />
   )
 }

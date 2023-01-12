@@ -1,16 +1,27 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body {
+  background-color: #171920;
+}
+
 .cityForm {
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 1.3rem;
+  gap: 1.2rem;
   margin-top: 1rem;
+  justify-content: center;
 }
 
 .formInput {
-  width: 7rem;
-  height: 1.5rem;
+  width: 10rem;
+  height: 2.4rem;
   font-family: 'Dejavu Sans', sans-serif;
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: #24272c;
   font-weight: 500;
   padding-left: 1rem;
@@ -18,27 +29,63 @@
   border-radius: 0.3rem;
   border: none;
   outline: none;
-  background-color: lightblue;
+  background-color: rgb(219, 231, 255);
 }
 
 .formInput::placeholder {
   color: #24272c;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 .submitButton {
   color: #24272c;
   font-family: 'Dejavu Sans', sans-serif;
-  font-size: 1rem;
-  width: 6.5rem;
-  height: 2rem;
-  border-radius: 0.5rem;
+  font-size: 1.3rem;
+  width: 8.5rem;
+  height: 2.5rem;
+  border-radius: 1rem;
   border: none;
-  background-color:lightblue;
+  background-color:rgb(219, 231, 255);
   cursor: default;
 }
 
-.chart-container {
-  width: 100rem;
-  height: 50rem;
+.submitButton:hover {
+  background-color: rgb(200, 211, 233);
+}
+
+.submitButton:active {
+  background-color: rgb(219, 231, 255);
+}
+
+.weather-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-cards {
+  display: flex;
+  margin-top: 1.5rem;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  gap: 1.5rem;
+}
+
+.weather-card {
+  width: 7rem;
+  height: 11rem;
+  display: flex;
+  color:rgb(219, 231, 255);
+  font-size: 1.1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #232530;
+  border: 0.5px solid none;
+  border-radius: 0.5rem;
+}
+
+.weather-icon {
+  width: 7rem;
 }
