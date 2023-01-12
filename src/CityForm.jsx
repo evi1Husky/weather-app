@@ -10,6 +10,7 @@ export default function CityForm() {
     let data = new FormData(event.target)
     data = ([...data.entries()])
     setCityProp(data[0][1])
+    localStorage.setItem('city', data[0][1])
   }
 
   const handleChange = (event) => {
@@ -18,7 +19,11 @@ export default function CityForm() {
   }
 
   useEffect(() => {
-    setCityProp('london')
+    if (localStorage.length == 0) {
+      return
+    } else {
+      setCityProp(localStorage.getItem('city'))
+    }
   }, [])
 
   return (
@@ -28,7 +33,6 @@ export default function CityForm() {
         onChange={handleChange} required />
       <button className="submitButton" type="submit">get weather</button>
       <WeatherFetcher city={cityProp} />
-      {/* <WeatherFetcher city='tokyo' /> */}
     </form>
   );
 }

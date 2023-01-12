@@ -1,17 +1,12 @@
-import { useState, useEffect } from "react"
 import {
   AnimatedAxis,
-  AnimatedGrid,
   AnimatedLineSeries,
   XYChart,
   Tooltip,
   buildChartTheme,
   AnimatedAreaSeries,
-  AnnotationLabel,
-  ParentSize
 } from '@visx/xychart';
 import { curveLinear, curveStep, curveCardinal } from '@visx/curve'
-import { lightTheme, darkTheme, XYChartTheme } from '@visx/xychart';
 
 const customTheme = buildChartTheme({
   backgroundColor: 'black',
@@ -28,11 +23,11 @@ export default function WeatherLineChart(props) {
   };
 
   const renderChart = (
-    <XYChart height={window.innerHeight/3} width={window.innerWidth} 
+    <XYChart height={window.innerHeight / 3} width={window.innerWidth}
       xScale={{ type: 'band' }} yScale={{ type: 'linear' }} theme={customTheme}>
       <AnimatedAxis hideAxisLine hideTicks orientation="left" />
-      <AnimatedAxis hideAxisLine hideTicks orientation="bottom" />
-      <AnimatedLineSeries fillOpacity={0.4} curve={curveCardinal} 
+      <AnimatedAxis hideAxisLine hideTicks orientation="bottom" numTicks={7} />
+      <AnimatedLineSeries fillOpacity={0.4} curve={curveCardinal}
         dataKey="Line 1" data={props.data} {...accessors} />
       <Tooltip
         snapTooltipToDatumX
