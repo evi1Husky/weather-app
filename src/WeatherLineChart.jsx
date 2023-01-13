@@ -5,6 +5,7 @@ import {
   Tooltip,
   buildChartTheme,
   AnimatedAreaSeries,
+  BarSeries
 } from '@visx/xychart';
 import { curveLinear, curveStep, curveCardinal } from '@visx/curve'
 
@@ -12,7 +13,7 @@ const customTheme = buildChartTheme({
   backgroundColor: 'black',
   colors: ['rgb(219, 231, 255)'],
   svgLabelBig: { fill: 'rgb(219, 231, 255)' },
-  svgLabelSmall: { fill: 'rgb(219, 231, 255)' },
+  svgLabelSmall: { fill: 'rgb(219, 231, 255)', fontSize: 9, fontWeight: 350},
   tickLength: 12,
 });
 
@@ -23,12 +24,14 @@ export default function WeatherLineChart(props) {
   };
 
   const renderChart = (
-    <XYChart height={window.innerHeight / 3} width={window.innerWidth}
+    <XYChart height={window.innerHeight / 3.2} width={window.innerWidth}
       xScale={{ type: 'band' }} yScale={{ type: 'linear' }} theme={customTheme}>
       <AnimatedAxis hideAxisLine hideTicks orientation="left" />
       <AnimatedAxis hideAxisLine hideTicks orientation="bottom" numTicks={7} />
       <AnimatedLineSeries fillOpacity={0.4} curve={curveCardinal}
         dataKey="Line 1" data={props.data} {...accessors} />
+      {/* <BarSeries
+        dataKey="Line 1" data={props.data} {...accessors} /> */}
       <Tooltip
         snapTooltipToDatumX
         snapTooltipToDatumY
