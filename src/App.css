@@ -12,7 +12,7 @@ body {
   align-items: flex-start;
   flex-direction: column;
   gap: 1.7rem;
-  margin-top: 2.1rem;
+  margin-top: 4.1rem;
 }
 
 .formInput {
@@ -60,21 +60,21 @@ body {
 .weather-data {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .weather-cards {
+  overflow-x: scroll;
+  width: 100vw;
   display: flex;
-  margin-top: 1rem;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  margin-top: 2rem;
+  margin-left: 0rem;
+  justify-content: center;
   gap: 1.5rem;
 }
 
 .weather-card {
-  width: 7rem;
-  height: 11rem;
+  width: 8rem;
+  height: 12rem;
   display: flex;
   color: rgb(219, 231, 255);
   font-size: 1.1rem;
@@ -87,7 +87,7 @@ body {
 }
 
 .weather-icon {
-  width: 7rem;
+  width: 8rem;
 }
 
 @media only screen and (max-width:480px) {
@@ -95,47 +95,15 @@ body {
     overflow: hidden;
   }
 
-  .weather-icon {
-    width: 5.2rem;
-  }
-
-  .weather-card {
-    width: 5.2rem;
-    font-size: 0.7rem;
-    height: 9rem;
-  }
-
-  .weather-cards {
-    margin-left: 0.8rem;
-    gap: 0.5rem;
-  }
-}
-
-@media only screen and (max-width:395px) {
-  .weather-icon {
-    width: 5rem;
-  }
-
-  .weather-card {
-    width: 5rem;
-  }
-
-  .weather-cards {
-    margin-left: 0.6rem;
-  }
-}
-
-@media only screen and (max-width:380px) {
-  .weather-icon {
-    width: 5rem;
-  }
-
-  .weather-card {
-    width: 5rem;
+  .weather-data {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .weather-cards {
     margin-left: 0.3rem;
-    gap: 0.3rem;
+    gap: 0.8rem;
+    justify-content: flex-start;
   }
 }

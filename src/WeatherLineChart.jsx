@@ -14,7 +14,7 @@ const customTheme = buildChartTheme({
   colors: ['rgb(219, 231, 255)'],
   svgLabelBig: { fill: 'rgb(219, 231, 255)' },
   svgLabelSmall: { fill: 'rgb(219, 231, 255)', fontSize: 9, fontWeight: 350},
-  tickLength: 12,
+  tickLength: 16,
 });
 
 export default function WeatherLineChart(props) {
@@ -23,12 +23,18 @@ export default function WeatherLineChart(props) {
     yAccessor: (d) => d.y,
   };
 
+  let width = window.innerWidth
+  let height = window.innerHeight
+
+  if (window.innerWidth < 460)
+    width += 25
+
   const renderChart = (
-    <XYChart height={window.innerHeight / 3.2} width={window.innerWidth}
+    <XYChart height={height / 3.2} width={width}
       xScale={{ type: 'band' }} yScale={{ type: 'linear' }} theme={customTheme}>
       <AnimatedAxis hideAxisLine hideTicks orientation="left" numTicks={7} />
       <AnimatedAxis hideAxisLine hideTicks orientation="bottom" numTicks={7} />
-      <AnimatedLineSeries fillOpacity={0.4} curve={curveCardinal}
+      <AnimatedAreaSeries fillOpacity={0.4} curve={curveCardinal}
         dataKey="Line 1" data={props.data} {...accessors} />
       {/* <BarSeries
         dataKey="Line 1" data={props.data} {...accessors} /> */}

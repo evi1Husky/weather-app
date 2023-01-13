@@ -42,6 +42,7 @@ export default function WeatherDisplayer(props) {
 
   return (
     <div className='weather-data'>
+      
       <div className='weather-cards' >
         <div onClick={cardClick(0, 24)}>
           <WeatherCard data={props.data} day={0} />
