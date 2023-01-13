@@ -3,6 +3,7 @@ import WeatherLineChart from './WeatherLineChart'
 import WeatherCard from './WeatherCard'
 
 export default function WeatherDisplayer(props) {
+  console.log(props.data)
   const precipitation = props?.data?.hourly?.precipitation
   const temperature = props?.data?.hourly?.temperature_2m
   const time = props?.data?.hourly?.time

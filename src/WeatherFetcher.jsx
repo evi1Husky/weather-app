@@ -12,6 +12,7 @@ export default function WeatherFetcher(props) {
             `latitude=${result.results[0].latitude}&` +
             `longitude=${result.results[0].longitude}` +
             '&hourly=temperature_2m,precipitation,windspeed_10m' +
+            '&models=best_match' +
             '&daily=weathercode,temperature_2m_max,temperature_2m_min,' +
             'precipitation_sum,windspeed_10m_max&timezone=' +
             `${result.results[0].timezone}`)

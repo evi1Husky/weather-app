@@ -29,7 +29,7 @@ export default function CityForm() {
   return (
     <form className="cityForm" onSubmit={handleSubmit}>
       <input className="formInput" type="text" name="city"
-        placeholder="your city..." value={city}
+        placeholder="City or zip code..." value={city}
         onChange={handleChange} required />
       <button className="submitButton" type="submit">get weather</button>
         <WeatherFetcher city={cityProp} />
