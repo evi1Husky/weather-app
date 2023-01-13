@@ -37,7 +37,7 @@ export default function WeatherDisplayer(props) {
     setPrecipitationProp(precipitationData)
   }, [props.data])
 
-  if (!props.data)
+  if (!props.data || !props.city)
     return
 
   return (
