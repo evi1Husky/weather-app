@@ -5,6 +5,10 @@ export default function WeatherFetcher(props) {
   const [weatherData, setWeatherData] = useState("")
   const [city, setCity] = useState("")
 
+  let units = ''
+  if (props.units === '°F')
+    units = '&temperature_unit=fahrenheit&precipitation_unit=inch'
+
   useEffect(() => {
     if (props.city) {
       fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${props.city}`)
@@ -18,7 +22,9 @@ export default function WeatherFetcher(props) {
             '&daily=weathercode,temperature_2m_max,temperature_2m_min,' +
             'precipitation_sum,windspeed_10m_max&timezone=' +
             `${result.results[0].timezone}` +
-            '&current_weather=true')
+            '&current_weather=true'
+            + units
+            )
             .then(result => result.json()).then((result) => {
               setWeatherData(result)
             })

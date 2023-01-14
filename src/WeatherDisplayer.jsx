@@ -70,9 +70,9 @@ export default function WeatherDisplayer(props) {
           </div>
         </div>
         <label className='temp-label' htmlFor='temp-chart'>Temperature {tempUnits}:</label>
-        <WeatherLineChart className='temp-chart' data={temperatureProp} />
+        <WeatherLineChart className='temp-chart' data={temperatureProp} type={'temperature'}/>
         <label className='precip-label' htmlFor='precip-chart'>Precipitation {precipUnits}:</label>
-        <WeatherLineChart className='precip-chart' data={precipitationProp} />
+        <WeatherLineChart className='precip-chart' data={precipitationProp} type={'precipitation'} />
       </div>
     </div>
   )
