@@ -13,7 +13,7 @@ body {
 body {
   background-color: #171920;
 }
- 
+
 .cityForm {
   display: flex;
   align-items: flex-start;
@@ -74,9 +74,9 @@ body {
   width: 100vw;
   display: flex;
   margin-top: 2rem;
-  margin-left: 0rem;
-  justify-content: center;
-  gap: 1.5rem;
+  margin-left: 1.3rem;
+  justify-content: flex-start;
+  gap: 3.4%;
 }
 
 .weather-card {
@@ -182,5 +182,66 @@ body {
     margin-left: 0.3rem;
     gap: 0.8rem;
     justify-content: flex-start;
+  }
+}
+
+@media only screen and (max-width:370px) {
+  .info-card {
+    width: 18rem;
+    height: 13rem;
+  }
+
+  .cityForm {
+    margin-top: 6.9rem;
+  }
+}
+
+@media only screen and (max-width:325px) {
+  .info-card {
+    width: 14.5rem;
+    height: 13rem;
+  }
+
+  .cityForm {
+    margin-top: 6.9rem;
+  }
+}
+
+@media only screen and (min-width:800px) {
+  .cityForm {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.7rem;
+    margin-top: 7rem;
+    margin-left: 1.2rem;
+  }
+
+  .submitButton {
+    margin-left: 1.5rem;
+    font-size: 1.3rem;
+    width: 8.5rem;
+    height: 2.5rem;
+  }
+
+  .info-card {
+    width: 21rem;
+    height: 12rem;
+    margin-left: 15%;
+    top: 3%;
+  }
+
+  .weather-card {
+    width: 10rem;
+    height: 13rem;
+  }
+
+  .weather-cards {
+    gap: 4vw;
+    justify-content: center;
+  }
+
+  .weather-icon {
+    width: 9rem;
   }
 }
