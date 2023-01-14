@@ -30,7 +30,7 @@ export default function WeatherLineChart(props) {
     width += 25
 
   const renderChart = (
-    <XYChart height={height / 3.2} width={width}
+    <XYChart height={height / 3.5} width={width}
       xScale={{ type: 'band' }} yScale={{ type: 'linear' }} theme={customTheme}>
       <AnimatedAxis hideAxisLine hideTicks orientation="left" numTicks={7} />
       <AnimatedAxis hideAxisLine hideTicks orientation="bottom" numTicks={7} />

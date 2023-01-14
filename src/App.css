@@ -3,6 +3,13 @@
   flex-direction: column;
 }
 
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden
+}
+
 body {
   background-color: #171920;
 }
@@ -88,6 +95,41 @@ body {
 
 .weather-icon {
   width: 8rem;
+}
+
+.info-card {
+  padding: 0.7rem;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  height: 11rem;
+  background-color: #232530;
+  border-radius: 0.5rem;
+  margin-left: 15rem;
+  top: 1.5%;
+  color: rgb(219, 231, 255);
+  font-size: 1.1rem;
+}
+
+.info-card .location {
+  display: flex;
+  gap: 0.7rem;
+
+}
+
+.info-card .city {
+  font-size: 1.7rem;
+}
+
+.info-card .country {
+  font-size: 1.3rem;
+  padding-top: 0.43rem;
+}
+
+.info-card .coordinates {
+  font-size: 0.8rem;
+  padding-top: 0.4rem;
 }
 
 @media only screen and (max-width:480px) {

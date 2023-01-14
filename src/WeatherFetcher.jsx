@@ -17,7 +17,8 @@ export default function WeatherFetcher(props) {
             '&models=best_match' +
             '&daily=weathercode,temperature_2m_max,temperature_2m_min,' +
             'precipitation_sum,windspeed_10m_max&timezone=' +
-            `${result.results[0].timezone}`)
+            `${result.results[0].timezone}` +
+            '&current_weather=true')
             .then(result => result.json()).then((result) => {
               setWeatherData(result)
             })
