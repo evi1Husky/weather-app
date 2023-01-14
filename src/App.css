@@ -91,6 +91,19 @@ body {
   background-color: #232530;
   border: 0.5px solid none;
   border-radius: 0.5rem;
+  user-select: none;
+}
+
+.weather-card:hover {
+  background-color: #2a2c39;
+}
+
+.weather-card:active {
+  background-color: #303242;
+}
+
+.weather-card:focus {
+  background-color: #303242;
 }
 
 .weather-icon {
