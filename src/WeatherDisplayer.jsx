@@ -8,6 +8,8 @@ export default function WeatherDisplayer(props) {
   const temperature = props?.data?.hourly?.temperature_2m
   const time = props?.data?.hourly?.time
   const length = props?.data?.hourly?.time?.length
+  const tempUnits = props?.data?.hourly_units?.temperature_2m
+  const precipUnits = props?.data?.daily_units?.precipitation_sum
 
   let temperatureData = []
   let precipitationData = []
@@ -67,8 +69,10 @@ export default function WeatherDisplayer(props) {
             <WeatherCard data={props.data} day={6} />
           </div>
         </div>
-        <WeatherLineChart data={temperatureProp} />
-        <WeatherLineChart data={precipitationProp} />
+        <label className='temp-label' htmlFor='temp-chart'>Temperature {tempUnits}:</label>
+        <WeatherLineChart className='temp-chart' data={temperatureProp} />
+        <label className='precip-label' htmlFor='precip-chart'>Precipitation {precipUnits}:</label>
+        <WeatherLineChart className='precip-chart' data={precipitationProp} />
       </div>
     </div>
   )

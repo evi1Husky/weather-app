@@ -17,7 +17,7 @@ const customTheme = buildChartTheme({
   colors: ['rgb(219, 231, 255)'],
   svgLabelBig: { fill: 'rgb(219, 231, 255)' },
   svgLabelSmall: { fill: 'rgb(219, 231, 255)', fontSize: 9, fontWeight: 350},
-  tickLength: 16,
+  tickLength: 12,
 });
 
 export default function WeatherLineChart(props) {

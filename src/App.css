@@ -103,7 +103,7 @@ body {
 }
 
 .weather-card:focus {
-  background-color: #303242;
+  background-color: #343648;
 }
 
 .weather-icon {
@@ -178,6 +178,17 @@ body {
 .info-card-wether-box-2 {
   display: flex;
   flex-direction: column;
+}
+
+.temp-label, .precip-label {
+  color: rgb(219, 231, 255);
+  position: absolute;
+  margin-top: 15rem;
+  margin-left: 1rem;
+}
+
+.precip-label {
+  top: 46.5%;
 }
 
 @media only screen and (max-width:480px) {
