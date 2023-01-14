@@ -9,7 +9,7 @@ export default function WeatherCard(props) {
   return (
     <div className="weather-card">
       <p>{day}</p>
-      <img className='weather-icon' src={weatherMap[weathercode]} />
+      <img className='weather-icon' src={weatherMap[weathercode][0]} />
       <p>{temperatureMin} {temperatureMax}</p>
     </div>
   )
