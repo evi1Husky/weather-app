@@ -13,13 +13,13 @@ body {
 body {
   background-color: #171920;
 }
-
+ 
 .cityForm {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
   gap: 1.7rem;
-  margin-top: 4.1rem;
+  margin-top: 5.9rem;
 }
 
 .formInput {
@@ -98,12 +98,12 @@ body {
 }
 
 .info-card {
-  padding: 0.7rem;
+  padding: 1rem;
   position: absolute;
   display: flex;
   flex-direction: column;
   width: 20rem;
-  height: 11rem;
+  height: 12rem;
   background-color: #232530;
   border-radius: 0.5rem;
   margin-left: 15rem;
@@ -130,6 +130,41 @@ body {
 .info-card .coordinates {
   font-size: 0.8rem;
   padding-top: 0.4rem;
+}
+
+.info-card-weather-container {
+  display: flex;
+}
+
+.info-card-temperature {
+  font-size: 4.5rem;
+  margin-left: 0rem;
+}
+
+.info-card-temp-units {
+  font-size: 2.5rem;
+}
+
+.info-card-time {
+  margin-top: 0.5rem;
+}
+
+.weather-icon-info-card {
+  width: 9rem;
+}
+
+.weather-code {
+  margin-top: 0.5rem;
+}
+
+.info-card-wether-box-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-card-wether-box-2 {
+  display: flex;
+  flex-direction: column;
 }
 
 @media only screen and (max-width:480px) {

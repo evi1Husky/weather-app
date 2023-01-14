@@ -1,13 +1,16 @@
 import {
   AnimatedAxis,
-  AnimatedLineSeries,
+  // AnimatedLineSeries,
   XYChart,
   Tooltip,
   buildChartTheme,
   AnimatedAreaSeries,
-  BarSeries
+  // BarSeries
 } from '@visx/xychart';
-import { curveLinear, curveStep, curveCardinal } from '@visx/curve'
+import { 
+  // curveLinear, 
+  // curveStep, 
+  curveCardinal } from '@visx/curve'
 
 const customTheme = buildChartTheme({
   backgroundColor: 'black',
