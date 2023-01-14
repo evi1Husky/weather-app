@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/weather-app/static/css/main.96513ac1.css",
+    "main.css": "/weather-app/static/css/main.170c4181.css",
     "main.js": "/weather-app/static/js/main.4fcff9fd.js",
     "static/media/extreme-day-snow.svg": "/weather-app/static/media/extreme-day-snow.bfdef5ebd5ae28b005c58cbe30b7e4c6.svg",
     "static/media/thunderstorms-extreme-snow.svg": "/weather-app/static/media/thunderstorms-extreme-snow.3aded2a8ff9fa99de3899f91d95f48a2.svg",
@@ -20,11 +20,11 @@
     "static/media/mist.svg": "/weather-app/static/media/mist.32e665d921e74ac88afbfdeb987bab9c.svg",
     "static/media/clear-day.svg": "/weather-app/static/media/clear-day.2909a175d21b0bc0a0c5cc4d70ede315.svg",
     "index.html": "/weather-app/index.html",
-    "main.96513ac1.css.map": "/weather-app/static/css/main.96513ac1.css.map",
+    "main.170c4181.css.map": "/weather-app/static/css/main.170c4181.css.map",
     "main.4fcff9fd.js.map": "/weather-app/static/js/main.4fcff9fd.js.map"
   },
   "entrypoints": [
-    "static/css/main.96513ac1.css",
+    "static/css/main.170c4181.css",
     "static/js/main.4fcff9fd.js"
   ]
 }
